@@ -7,10 +7,16 @@ import java.io.Serializable;
  */
 public class Compass implements Serializable {
 
+    private static final Compass instance = new Compass();
+
     private final Site[] sites = new Site[8];
 
-    public Compass() {
+    private Compass() {
         setPositionsSites(0);
+    }
+
+    public static Compass getInstance() {
+        return instance;
     }
 
     /**

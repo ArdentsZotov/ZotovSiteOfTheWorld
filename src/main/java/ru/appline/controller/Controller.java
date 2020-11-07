@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 public class Controller {
 
-    private Compass compass = new Compass();
+    private Compass compass = Compass.getInstance();
 
     /**
      * Я считаю, что немного странно указывать диапазоны сторон света, если они являются постояннными (см. любой компас).
